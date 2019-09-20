@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/banner_main"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+    <ImageButton
+        android:id="@+id/btn_logout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_power_settings_new_24dp"
+        android:contentDescription="@string/sign_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tv_main_candidate_picture"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_account_circle_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_main_candidate_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/banner_main" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_main_candidate_name"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/googe_font_med"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/banner_main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
+        tools:text="John Doe" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_main_candidate_vote"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/googe_font_med"
+        android:layout_gravity="center"
+        android:textColor="@color/colorSuccess"
+        app:layout_constraintEnd_toEndOf="@+id/tv_main_candidate_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_main_candidate_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_candidate_name"
+        tools:text="100%" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_visi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/googe_font_med"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="@string/visi"
+        app:layout_constraintEnd_toStartOf="@+id/tv_main_candidate_vote"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_candidate_vote" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_misi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/googe_font_med"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_marginTop="8dp"
+        android:text="@string/misi"
+        app:layout_constraintStart_toEndOf="@+id/tv_main_candidate_vote"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_candidate_vote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
