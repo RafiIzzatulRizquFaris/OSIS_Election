@@ -47,7 +47,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
 
     // Butterknife
-    implementation 'com.jakewharton:butterknife:10.1.0'
+    implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 
     // Gson
