@@ -44,7 +44,7 @@ dependencies {
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
 
     // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
 
     // Butterknife
     implementation 'com.jakewharton:butterknife:10.2.1'
